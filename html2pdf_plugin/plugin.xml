@@ -1,0 +1,43 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="de.hdpnet.htmltopdf"
+        version="0.7.1">
+
+    <name>htmltopdf</name>
+
+    <description>
+        convert html to pdf
+    </description>
+
+    <keywords>
+        print, printer, ios, android, google cloud, air print
+    </keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Kevin Van Rijmenant</author>
+
+    <!-- cordova -->
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- interface -->
+    <js-module src="www/htmltopdf.js" name="htmltopdf">
+        <clobbers target="htmltopdf" />
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="htmltopdf">
+                <param name="ios-package" value="htmltopdf"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/htmltopdf.h" />
+        <source-file src="src/ios/htmltopdf.m" />
+    </platform>
+</plugin>

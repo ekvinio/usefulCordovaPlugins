@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="de-hdpnet-androidintent" version="0.2.3">
+    <name>AndroidIntent</name>
+    <description>Cordova Android intent Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,intent</keywords>
+    <js-module src="www/intent.js" name="Intentplugin">
+        <clobbers target="Intentplugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Intentplugin">
+                <param name="android-package" value="Intentplugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Intentplugin.java" target-dir="src/" />
+    </platform>
+</plugin>

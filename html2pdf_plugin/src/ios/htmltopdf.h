@@ -1,0 +1,1 @@
+#import <Cordova/CDV.h>@interface htmltopdf : CDVPlugin- (void)print:(CDVInvokedUrlCommand*)command;- (NSString *)generatePDF:(NSString *)content fullname:(NSString *) Name;@end

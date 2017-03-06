@@ -1,0 +1,1 @@
+var exec = require("cordova/exec");function htmltopdf(){}htmltopdf.prototype.print = function (htmltxt,name) {    exec(function (success) {		$("body").trigger("openData",[success]);    },function (error) {        alert("error");    },"htmltopdf","print",[htmltxt,name]);};module.exports = new htmltopdf();
