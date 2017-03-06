@@ -1,5 +1,6 @@
 #IOS Sharing
-##inject following snippets
+##inject following snippets into your app to share
+
 ```objective-c
  - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
